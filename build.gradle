@@ -24,7 +24,10 @@ allprojects {
         appAndroidTargetSDK = 33
 
         gdxVersion = '1.11.0'
-        gdxControllersVersion = '2.2.4-SNAPSHOT'
+        // Was '2.2.4-SNAPSHOT' — the Sonatype OSSRH snapshot host that version depended on
+        // was permanently shut down June 30, 2025. 2.2.4 is available as a normal release
+        // on mavenCentral(), so switching off the SNAPSHOT suffix fixes resolution.
+        gdxControllersVersion = '2.2.4'
         robovmVersion = '2.3.19'
     }
     version = appVersionName
